@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Component</title>
+</head>
+<body>
+  <h1>Data from API</h1>
+  <!-- Button to toggle data visibility -->
+ <button (click)="toggleDataVisibility()">show cycles</button>
+  <!-- Data display section -->
+  <ul *ngIf="showData">
+    <li *ngFor="let item of newData">
+      <p>Cycle ID: {{ item.id }}</p>
+      <p>Cycle Name: {{ item.brand }}</p>
+      <p>Stock: {{ item.stock }}</p>
+    </li>
+  </ul>
+</body>
+</html>
+
+ 
